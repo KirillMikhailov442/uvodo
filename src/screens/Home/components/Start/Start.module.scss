@@ -1,0 +1,51 @@
+@import '@styles/mixins.scss';
+
+.section {
+  background-color: var(--gray-400);
+  padding-block: 75px 100px;
+}
+
+.container {
+  @include container;
+  text-align: center;
+}
+
+.title {
+  font-size: 52px;
+  color: var(--gray-800);
+}
+
+.subtitle {
+  margin-block: 10px 45px;
+}
+
+.list {
+  display: flex;
+  gap: 40px;
+}
+
+.card {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  padding-top: 50px;
+  background-color: var(--white);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  &Image {
+    width: 80px;
+    height: 80px;
+  }
+
+  &Text {
+    margin-block: 5px 25px;
+    color: var(--gray-800);
+  }
+
+  &Description {
+    font-size: 14px;
+  }
+}

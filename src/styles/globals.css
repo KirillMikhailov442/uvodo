@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./vars/colors.css');
+
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: var(--black-900);
+    line-height: 1.2; 
+}

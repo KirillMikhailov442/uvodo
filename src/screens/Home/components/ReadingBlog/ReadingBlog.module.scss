@@ -1,0 +1,62 @@
+@import '@styles/mixins.scss';
+
+.section {
+  margin-block: 75px;
+}
+
+.container {
+  @include container;
+  text-align: center;
+}
+
+.title {
+  font-size: 54px;
+  color: var(--gray-800);
+}
+
+.subtitle {
+  margin-block: 10px 50px;
+}
+
+.carousel {
+  height: 530px;
+}
+
+.card {
+  text-align: start;
+  &Image {
+    height: 240px;
+    margin-bottom: 15px;
+  }
+
+  &Description {
+    font-size: 16px;
+    margin-block: 10px 15px;
+  }
+
+  &Date {
+    font-size: 14px;
+    color: var(--gray-800);
+
+    & a {
+      color: var(--black-900);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.dot {
+  background-color: #869791;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  transition: background-color 0.5s ease;
+  margin-inline: 5px;
+
+  &Active {
+    background-color: var(--black-900);
+  }
+}

@@ -1,0 +1,31 @@
+@import '@styles/mixins.scss';
+
+.section {
+  display: flex;
+  background-color: var(--gray-400);
+}
+
+.container {
+  @include container;
+  width: 600px;
+  text-align: center;
+  margin-block: 60px 100px;
+}
+
+.title {
+  font-size: 56px;
+  color: var(--gray-800);
+}
+
+.subtitle {
+  margin-block: 60px 10px;
+}
+
+.description {
+  margin-bottom: 25px;
+  font-size: 12px;
+}
+
+.button {
+  padding-inline: 70px;
+}

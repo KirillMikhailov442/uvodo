@@ -1,0 +1,56 @@
+@import '@styles/mixins.scss';
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+.info {
+  grid-area: info;
+  margin-right: 100px;
+}
+
+#advantagesItem1 {
+  grid-area: advantagesItem1;
+}
+#advantagesItem2 {
+  grid-area: advantagesItem2;
+}
+#advantagesItem3 {
+  grid-area: advantagesItem3;
+}
+#advantagesItem4 {
+  grid-area: advantagesItem4;
+}
+#advantagesItem5 {
+  grid-area: advantagesItem5;
+}
+#advantagesItem6 {
+  grid-area: advantagesItem6;
+}
+
+.container {
+  @include container;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'info advantagesItem1 advantagesItem2' 'info advantagesItem3 advantagesItem4' 'info advantagesItem5 advantagesItem6';
+  margin-block: 80px;
+  gap: 40px 20px;
+}
+
+.description {
+  color: var(--purple-800);
+  font-size: 15px;
+}
+
+.title {
+  font-size: 45px;
+  margin-block: 18px 10px;
+  color: var(--gray-800);
+}
+
+.advantagesItem {
+  color: var(--gray-800);
+  &Text {
+    margin-block: 25px;
+  }
+}

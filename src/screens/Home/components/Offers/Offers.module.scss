@@ -1,0 +1,64 @@
+@import '@styles/mixins.scss';
+
+.section {
+  margin-block: 70px 100px;
+}
+
+.container {
+  text-align: center;
+  @include container;
+  width: 1000px;
+}
+
+.title {
+  font-size: 52px;
+  color: var(--gray-800);
+}
+
+.subtitle {
+  margin-block: 10px 25px;
+}
+
+.offers {
+  border-radius: 5px;
+  display: flex;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+  padding-block: 45px;
+}
+
+.card {
+  padding-inline: 45px;
+  text-align: start;
+  flex-basis: 33.3%;
+  border-right: 1px solid var(--gray-400);
+
+  &:last-child {
+    border: none;
+  }
+
+  &Title,
+  &Price {
+    font-size: 23px;
+    color: var(--gray-800);
+  }
+
+  &Text {
+    margin-block: 20px;
+    font-size: 14px;
+  }
+
+  &Button {
+    width: 100%;
+    margin-block: 20px 35px;
+  }
+
+  &List {
+    margin-left: 30px;
+    font-size: 14px;
+
+    &Item {
+      margin-bottom: 8px;
+    }
+  }
+}

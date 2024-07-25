@@ -1,0 +1,42 @@
+.section {
+  background-color: var(--gray-400);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  z-index: 5;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1040px;
+  padding-inline: 10px;
+  text-align: center;
+  margin-inline: auto;
+  margin-block: 85px 35px;
+  position: relative;
+  z-index: 10;
+}
+
+.description {
+  color: var(--purple-800);
+  font-size: 15px;
+}
+
+.title {
+  font-size: 53px;
+  width: 80%;
+}
+
+.subtitle {
+  margin-block: 12px 24px;
+}

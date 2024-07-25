@@ -1,0 +1,37 @@
+@import '@styles/mixins.scss';
+
+.banner {
+  display: flex;
+}
+
+.container {
+  @include container;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  flex-basis: 35%;
+  flex-shrink: 0;
+  // line-height: 1.2;
+}
+
+.description {
+  text-transform: uppercase;
+  color: var(--purple-800);
+  font-size: 15px;
+}
+
+.title {
+  font-size: 46px;
+  color: var(--gray-800);
+  margin-block: 26px 20px;
+}
+
+.subtitle {
+  margin-bottom: 35px;
+}
+
+.image {
+  flex-basis: 65%;
+}

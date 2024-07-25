@@ -1,0 +1,45 @@
+.hero {
+  padding-bottom: 140px;
+}
+
+.bgImage {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+}
+
+.description {
+  color: var(--gray-700);
+  font-size: 15px;
+}
+
+.title {
+  font-size: 54px;
+  color: var(--gray-800);
+  margin-block: 12px;
+}
+
+.text {
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+
+  & button {
+    width: 200px;
+  }
+}
+
+.companies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
