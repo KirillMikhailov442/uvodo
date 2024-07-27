@@ -1,4 +1,5 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars/screen-sizes.scss';
 
 .section {
   display: flex;
@@ -28,4 +29,19 @@
 
 .button {
   padding-inline: 70px;
+}
+
+@media (max-width: $mobileL) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-block: 30px 10px;
+  }
+
+  .container {
+    margin-block: 40px;
+  }
 }

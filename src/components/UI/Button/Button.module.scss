@@ -15,7 +15,17 @@
   }
 }
 
-.outline {
+.outlineBlack {
+  border: 2px solid var(--black-900);
+  color: var(--black-900);
+
+  &:hover {
+    background-color: var(--black-900);
+    color: var(--white);
+  }
+}
+
+.outlinePurple {
   border: 2px solid var(--purple-600);
   color: var(--purple-600);
 

@@ -20,6 +20,7 @@ const Card: FC<CardProps> = ({ image, text, description, date, ...props }) => {
         height={image.height}
         src={image.src}
         alt="card-img"
+        layout="responsive"
       />
       <p className={styles.cardText}>{text}</p>
       <p className={styles.cardDescription}>{description}</p>

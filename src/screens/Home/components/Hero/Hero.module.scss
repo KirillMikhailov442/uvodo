@@ -1,3 +1,5 @@
+@import '@styles/vars/screen-sizes.scss';
+
 .hero {
   padding-bottom: 140px;
 }
@@ -31,7 +33,7 @@
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 10px;
+  gap: 20px;
 
   & button {
     width: 200px;
@@ -42,4 +44,28 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media (max-width: $tablet) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    & button {
+      flex-grow: 1;
+    }
+  }
 }

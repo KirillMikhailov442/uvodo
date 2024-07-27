@@ -38,7 +38,7 @@ const Hero: FC = () => {
           </p>
           <div className={styles.buttons}>
             <Button variant="purple">Admin Demo</Button>
-            <Button variant="outline">Shop Demo</Button>
+            <Button variant="outline-purple">Shop Demo</Button>
           </div>
         </Banner>
         <ul className={styles.companies}>

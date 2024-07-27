@@ -18,7 +18,7 @@ import Contact from './components/Contact/Contact';
 
 const HomeScreen: FC = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Manage />
       <Advantages />
@@ -30,11 +30,11 @@ const HomeScreen: FC = () => {
         button={<Button>Buy Uvodo now</Button>}
       />
       <Banner
-        className={styles.bannerOrder}
         image={img_banner_2}
         description="PAY ONCE, USE LIFETIME"
         title="It’s how you sell on the spot"
         text="Sell from your online store and turn social media accounts into shoppable channels."
+        swap
         button={<Button>Buy Uvodo now</Button>}
       />
       <Clients />
@@ -42,7 +42,7 @@ const HomeScreen: FC = () => {
       <Start />
       <ReadingBlog />
       <Contact />
-    </div>
+    </>
   );
 };
 

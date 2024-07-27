@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <div className="wrapper">
           <Header />
-          {children}
+          <main className=" flex-grow">{children}</main>
           <Footer />
         </div>
       </body>

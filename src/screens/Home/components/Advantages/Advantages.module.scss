@@ -1,4 +1,5 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars/screen-sizes.scss';
 
 .section {
   display: flex;
@@ -52,5 +53,25 @@
   color: var(--gray-800);
   &Text {
     margin-block: 25px;
+  }
+}
+
+@media (max-width: $laptop) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-areas: 'info info' 'advantagesItem1 advantagesItem2' 'advantagesItem3 advantagesItem4' 'advantagesItem5 advantagesItem6';
+  }
+
+  .info {
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'info' 'advantagesItem1' 'advantagesItem2' 'advantagesItem3' 'advantagesItem4' 'advantagesItem5' 'advantagesItem6';
   }
 }

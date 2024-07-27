@@ -1,7 +1,9 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars/screen-sizes.scss';
 
 .banner {
   display: flex;
+  margin-block: 50px;
 }
 
 .container {
@@ -11,9 +13,8 @@
 }
 
 .content {
-  flex-basis: 35%;
+  flex-basis: 40%;
   flex-shrink: 0;
-  // line-height: 1.2;
 }
 
 .description {
@@ -34,4 +35,30 @@
 
 .image {
   flex-basis: 65%;
+}
+
+@media (max-width: $tablet) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .content {
+    order: 1;
+  }
+
+  .image {
+    order: 2 !important;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
 }

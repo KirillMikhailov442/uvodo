@@ -1,3 +1,5 @@
+@import '@styles/vars/screen-sizes.scss';
+
 .section {
   background-color: var(--gray-400);
   display: flex;
@@ -39,4 +41,20 @@
 
 .subtitle {
   margin-block: 12px 24px;
+}
+
+@media (max-width: $laptop) {
+  .title {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
 }

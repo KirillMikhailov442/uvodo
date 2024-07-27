@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import styles from './Header.module.scss';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,6 +7,8 @@ import cn from 'clsx';
 import logo_dark from '@assets/logo-dark.png';
 import logo_light from '@assets/logo-light.png';
 import Button from '@components/UI/Button/Button';
+
+import styles from './Header.module.scss';
 
 const Header: FC = () => {
   return (
@@ -66,6 +67,14 @@ const Header: FC = () => {
               <Button>Buy Uvodo now</Button>
             </li>
           </ul>
+          <Button
+            variant="outline-black"
+            className={cn(styles.hamburger, styles.active)}
+          >
+            <span className={styles.hamburgerItem1}></span>
+            <span className={styles.hamburgerItem2}></span>
+            <span className={styles.hamburgerItem3}></span>
+          </Button>
         </nav>
       </div>
     </header>

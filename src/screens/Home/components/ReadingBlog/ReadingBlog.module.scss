@@ -1,11 +1,12 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars/screen-sizes.scss';
 
 .section {
   margin-block: 75px;
 }
 
 .container {
-  @include container;
+  @include container(true);
   text-align: center;
 }
 
@@ -19,11 +20,18 @@
 }
 
 .carousel {
-  height: 530px;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.listDot {
+  position: absolute;
+  bottom: 0;
 }
 
 .card {
   text-align: start;
+  margin-inline: 20px;
   &Image {
     height: 240px;
     margin-bottom: 15px;
@@ -58,5 +66,19 @@
 
   &Active {
     background-color: var(--black-900);
+  }
+}
+
+@media (max-width: $mobileL) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .section {
+    margin-block: 40px;
   }
 }

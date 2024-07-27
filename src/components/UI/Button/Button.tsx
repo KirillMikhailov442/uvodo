@@ -3,7 +3,7 @@ import cn from 'clsx';
 
 import styles from './Button.module.scss';
 
-type ButtonVariants = 'default' | 'outline' | 'purple';
+type ButtonVariants = 'default' | 'outline-purple' | 'outline-black' | 'purple';
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -26,10 +26,19 @@ const Button: FC<ButtonProps> = ({
           {children}
         </button>
       );
-    case 'outline':
+    case 'outline-black':
       return (
         <button
-          className={cn(styles.button, styles.outline, className)}
+          className={cn(styles.button, styles.outlineBlack, className)}
+          {...props}
+        >
+          {children}
+        </button>
+      );
+    case 'outline-purple':
+      return (
+        <button
+          className={cn(styles.button, styles.outlinePurple, className)}
           {...props}
         >
           {children}

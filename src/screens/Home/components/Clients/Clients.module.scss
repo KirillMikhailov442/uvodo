@@ -1,4 +1,5 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars/screen-sizes.scss';
 
 .section {
   background-color: var(--berger);
@@ -22,8 +23,7 @@
 }
 
 .carousel {
-  height: 380px;
-  align-items: flex-start !important;
+  position: relative;
 }
 
 .button {
@@ -56,13 +56,17 @@
   }
 }
 
+.listDot {
+  position: absolute;
+  bottom: 0;
+}
+
 .dot {
   border: 4px solid var(--white);
   width: 76px;
   height: 76px;
   margin-inline: 8px;
   cursor: pointer;
-  margin-top: -90px;
 
   &Active {
     border: 4px solid var(--purple-800);
@@ -77,6 +81,7 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 80px;
     margin-inline: 70px;
+    margin-bottom: 30px;
   }
 
   &Text {
@@ -92,5 +97,54 @@
   &Profession {
     color: var(--gray-800);
     font-size: 14px;
+  }
+}
+
+@media (max-width: $laptop) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .comment {
+    &Content {
+      padding: 40px;
+    }
+
+    &Text {
+      font-size: 1.2rem;
+    }
+
+    &Author {
+      font-size: 1rem;
+    }
+
+    &Profession {
+      font-size: 0.8rem;
+    }
+  }
+
+  .dot {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .button {
+    display: none;
+  }
+
+  .commentContent {
+    margin-inline: 0;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 }

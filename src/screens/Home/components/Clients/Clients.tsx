@@ -48,6 +48,14 @@ const responsive = {
     items: 1,
     slidesToSlide: 1,
   },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
 };
 
 const Clients: FC = () => {
@@ -59,7 +67,7 @@ const Clients: FC = () => {
           See what it’s like to be a customer of Uvodo.
         </p>
         <Carousel
-          swipeable={false}
+          swipeable={true}
           draggable={false}
           showDots={true}
           responsive={responsive}
@@ -69,6 +77,7 @@ const Clients: FC = () => {
           keyBoardControl={true}
           containerClass={styles.carousel}
           itemClass={styles.item}
+          dotListClass={styles.listDot}
           customLeftArrow={<CustomLeftArrow />}
           customRightArrow={<CustomRightArrow />}
           customDot={<CustomDot />}
@@ -79,8 +88,8 @@ const Clients: FC = () => {
             profession="Entrepreneur, Business Owner"
           />
           <Comment
-            comment="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, officiis aliquid ducimus neque nam sed debitis molestias amet, alias eaque enim dignissimos nesciunt, ipsa eius laboriosam ut tempore minima deleniti!"
-            author="Josh Groh"
+            comment="Uvodo and it’s amazing support team has helped me set up my first ever online store from the ground up. Now I’m making a living from my hobby. Couldn’t be happier!"
+            author="Zane Mayes"
             profession="Entrepreneur, Business Owner"
           />
         </Carousel>

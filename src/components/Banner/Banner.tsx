@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from 'next/image';
 import styles from './Banner.module.scss';
 
+import cn from 'clsx';
+
 import React, { FC, HTMLAttributes } from 'react';
 
 interface BannerProps extends HTMLAttributes<HTMLDivElement> {
@@ -9,6 +11,7 @@ interface BannerProps extends HTMLAttributes<HTMLDivElement> {
   text?: string;
   button?: React.JSX.Element;
   image: StaticImageData;
+  swap?: boolean;
   children?: React.ReactNode;
 }
 
@@ -19,14 +22,22 @@ const Banner: FC<BannerProps> = ({
   button,
   image,
   children,
+  className,
+  swap,
   ...props
 }) => {
   if (children) {
     return (
-      <section className={styles.banner} {...props}>
+      <section className={cn(styles.banner, className)} {...props}>
         <div className={styles.container}>
           <div className={styles.content}>{children}</div>
-          <Image className={styles.image} src={image} alt="banner-img" />
+          <Image
+            className={styles.image}
+            src={image}
+            alt="banner-img"
+            layout="responsive"
+            style={{ order: swap ? '-1' : '2' }}
+          />
         </div>
       </section>
     );
@@ -47,6 +58,8 @@ const Banner: FC<BannerProps> = ({
           height={0}
           src={image}
           alt="banner-img"
+          layout="responsive"
+          style={{ order: swap ? '-1' : '2' }}
         />
       </div>
     </section>

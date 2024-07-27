@@ -1,4 +1,5 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars/screen-sizes.scss';
 
 .header {
   display: flex;
@@ -60,5 +61,67 @@
     &:hover::before {
       width: 90%;
     }
+  }
+}
+
+.hamburger {
+  position: relative;
+  height: 54px !important;
+  width: 54px;
+  padding: 0;
+  display: none;
+
+  &:hover span {
+    background-color: var(--white);
+  }
+
+  & span {
+    position: absolute;
+    height: 2px;
+    width: 65%;
+    border-radius: 10px;
+    background-color: var(--black-800);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+  }
+
+  &Item1 {
+    top: 30%;
+  }
+
+  &Item2 {
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%) !important;
+  }
+
+  &Item3 {
+    bottom: 30%;
+  }
+}
+
+.active {
+  & .hamburgerItem1 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  & .hamburgerItem2 {
+    width: 0;
+  }
+
+  & .hamburgerItem3 {
+    bottom: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+  }
+}
+
+@media (max-width: $laptop) {
+  .list {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
   }
 }

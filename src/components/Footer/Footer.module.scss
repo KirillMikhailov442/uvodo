@@ -1,4 +1,5 @@
 @import '@styles/mixins.scss';
+@import '@styles/vars/screen-sizes.scss';
 
 .footer {
   background-color: var(--black-900);
@@ -8,7 +9,7 @@
 }
 
 .container {
-  @include container;
+  @include container(true);
 }
 
 .header {
@@ -67,4 +68,14 @@
 
 .copyright {
   color: var(--white);
+}
+
+@media (max-width: $mobileL) {
+  .header {
+    justify-content: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
 }
