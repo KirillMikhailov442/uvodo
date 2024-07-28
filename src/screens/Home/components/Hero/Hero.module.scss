@@ -46,11 +46,21 @@
   flex-wrap: wrap;
 }
 
+@media (prefers-color-scheme: dark) {
+  .bgImage {
+    display: none;
+  }
+}
+
 @media (max-width: $tablet) {
   .container {
     flex-direction: column;
     gap: 30px;
     text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
   }
 }
 

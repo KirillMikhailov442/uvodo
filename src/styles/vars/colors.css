@@ -11,3 +11,16 @@
   --purple-800: #624CE0;
   --white: #fff;
 }
+
+@media(prefers-color-scheme: dark){
+  :root{
+    --white: #1D1D1D;
+    --black-900: #E6E6E6;
+    --black-800: #E6E6E6;
+    --gray-800: #E6E6E6;
+    --gray-700: #E6E6E6;
+    --gray-600: #E6E6E6;
+    --gray-400: #212121;
+    --berger: #212121; 
+  }
+}

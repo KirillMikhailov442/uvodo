@@ -54,7 +54,7 @@ const ReadingBlog: FC = () => {
           responsive={responsive}
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={10000}
+          autoPlaySpeed={8000}
           keyBoardControl={true}
           className={styles.carousel}
           dotListClass={styles.listDot}

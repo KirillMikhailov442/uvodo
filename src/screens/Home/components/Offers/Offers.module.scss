@@ -81,7 +81,12 @@
     border-right: none;
     padding-block: 40px;
     border-radius: 5px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: none;
+    border: 1px solid var(--gray-600);
+
+    &:last-child {
+      border: 1px solid var(--gray-600);
+    }
   }
 }
 
@@ -96,9 +101,5 @@
 
   .section {
     margin-block: 40px;
-  }
-
-  .card {
-    padding-inline: 25px;
   }
 }

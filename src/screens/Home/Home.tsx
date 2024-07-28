@@ -23,6 +23,7 @@ const HomeScreen: FC = () => {
       <Manage />
       <Advantages />
       <Banner
+        className={styles.banner}
         image={img_banner_1}
         description="PWA READY STOREFRONT"
         title="Pay once, own everything"
@@ -30,6 +31,7 @@ const HomeScreen: FC = () => {
         button={<Button>Buy Uvodo now</Button>}
       />
       <Banner
+        className={styles.banner}
         image={img_banner_2}
         description="PAY ONCE, USE LIFETIME"
         title="It’s how you sell on the spot"

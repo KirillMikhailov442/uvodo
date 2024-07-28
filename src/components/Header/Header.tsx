@@ -1,3 +1,5 @@
+'use client';
+
 import { FC } from 'react';
 
 import Link from 'next/link';
@@ -9,10 +11,21 @@ import logo_light from '@assets/logo-light.png';
 import Button from '@components/UI/Button/Button';
 
 import styles from './Header.module.scss';
+import useAppSelector from '@/hooks/useAppSelector';
+import useAppDispatch from '@/hooks/useAppDispatch';
+import { toggleComponent } from '@store/slices/showComponents';
 
 const Header: FC = () => {
+  const showMobileNavList = useAppSelector(
+    state => state.showComponents.mobileNavList,
+  );
+  const dispatch = useAppDispatch();
   return (
-    <header className={styles.header}>
+    <header
+      className={cn(styles.header, {
+        [`${styles.showMobileNav}`]: showMobileNavList,
+      })}
+    >
       <div className={styles.container}>
         <div className={styles.leftItem}>
           <Link className={cn(styles.logo, styles.logoLight)} href={'/'}>
@@ -69,7 +82,10 @@ const Header: FC = () => {
           </ul>
           <Button
             variant="outline-black"
-            className={cn(styles.hamburger, styles.active)}
+            onClick={() => dispatch(toggleComponent('mobileNavList'))}
+            className={cn(styles.hamburger, {
+              [`${styles.active}`]: showMobileNavList,
+            })}
           >
             <span className={styles.hamburgerItem1}></span>
             <span className={styles.hamburgerItem2}></span>

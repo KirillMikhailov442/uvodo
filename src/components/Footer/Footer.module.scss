@@ -70,6 +70,20 @@
   color: var(--white);
 }
 
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: var(--white);
+  }
+
+  .list {
+    color: var(--black-900);
+  }
+
+  .columnLink:hover {
+    color: var(--purple-800);
+  }
+}
+
 @media (max-width: $mobileL) {
   .header {
     justify-content: center;

@@ -10,5 +10,6 @@
     flex-direction: column;
     font-size: 18px;
     color: var(--black-900);
+    background-color: var(--white);
     line-height: 1.2; 
 }

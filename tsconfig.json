@@ -24,6 +24,7 @@
       "@components/*": ["./src/components/*"],
       "@store/*": ["./src/store/*"],
       "@UI/*": ["./src/components/UI/*"],
+      "@Layouts/*": ["./src/components/Layouts/*"],
       "@/*": ["./src/*"],
     }
   },
